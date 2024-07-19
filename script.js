@@ -62,13 +62,13 @@ function validateForm(event) {
     document.getElementById("form").submit();
   }
 
-  //   const formData = {
-  //     name: name,
-  //     email: email,
-  //     age: age,
-  //   };
-  //   alert(JSON.stringify(formData));
-  //   console.log(name, email, age);
+  const formData = {
+    name: name,
+    email: email,
+    age: age,
+  };
+  alert(JSON.stringify(formData));
+  console.log(name, email, age);
 }
 
 // class Todo {

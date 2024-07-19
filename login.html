@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function validateForm(event) {
+        event.preventDefault();
+
+        let isValid = true;
+
+        const name = document.getElementById("name").value;
+        const errorName = document.getElementById("error_name");
+
+        const password = document.getElementById("password").value;
+        const errorPassword = document.getElementById("error_password");
+
+        if (name === "") {
+          errorName.textContent = "Username is required.";
+          isValid = false;
+        } else {
+          errorName.textContent = "";
+        }
+
+        if (password === "") {
+          errorPassword.textContent = "Password is required.";
+          isValid = false;
+        } else if (password.length < 6) {
+          errorPassword.textContent =
+            "Password must be at least 6 characters long.";
+          isValid = false;
+        } else {
+          errorPassword.textContent = "";
+        }
+
+        if (isValid) {
+          if (form.name.value == "admin" && form.password.value == "aaaaaa") {
+            // alert("Correct email and password");
+            window.location = "index.html";
+          } else {
+            alert("Incorrect Password or Username");
+            return false;
+          }
+        }
+      }
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="heading">
+        <h2>Log In</h2>
+      </div>
+      <form
+        class="form"
+        id="form"
+        action="login.html"
+        onsubmit="validateForm(event)"
+      >
+        <div class="form-group">
+          <label for="name">Username</label>
+          <input type="text" name="name" id="name" />
+          <span id="error_name" style="color: red"></span>
+        </div>
+        <br />
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+          <span id="error_password" style="color: red"></span>
+        </div>
+        <br />
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

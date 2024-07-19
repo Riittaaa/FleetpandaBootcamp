@@ -17,7 +17,8 @@
         <li><a href="">Home</a></li>
         <li><a href="">About Us</a></li>
         <li><a href="">Contact</a></li>
-        <li><a href="">Services</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="login.html">Login</a></li>
       </ul>
     </nav>
 
@@ -60,7 +61,7 @@
     </section>
     <hr /> -->
 
-    <section class="services">
+    <section id="services" class="services">
       <h2>Services</h2>
 
       <div class="content">
@@ -115,7 +116,13 @@
         <div class="heading">
           <h2>Log In</h2>
         </div>
-        <form class="form" id="form" action="" onsubmit="validateForm(event)">
+        <form
+          class="form"
+          method=""
+          id="form"
+          action=""
+          onsubmit="validateForm(event)"
+        >
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" name="name" id="name" />
