@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100%;
+  height: 75px;
+  line-height: 75px;
+  padding: 0 100px;
+  /* position: fixed; */
+  background-image: linear-gradient(#033747, #012733);
+}
+
+nav .logo p {
+  font-size: 30px;
+  font-weight: bold;
+  float: left;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+nav ul {
+  float: right;
+  /* list-style-type: none; */
+}
+
+nav li {
+  display: inline-block;
+  list-style-type: none;
+}
+nav li a {
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 0 30px;
+  color: white;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  color: #ff8c69;
+  /* transition: all 0.4s ease 0; */
+}
+
+.content-items img {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.last {
+  /* border: 2px solid #012733; */
+  display: flex;
+  margin: 20px;
+}
+.side1 {
+  /* border: 1px solid gray; */
+  padding: 20px;
+  width: 30%;
+  margin: 100px;
+}
+.side1 h3 {
+  color: #ee5c30;
+  margin-bottom: 10px;
+}
+
+.side1 ul {
+  list-style-type: none;
+  line-height: 20px;
+}
+.side2 {
+  border: 1px solid gray;
+
+  margin: 100px;
+}
+.services h2 {
+  text-align: center;
+  margin-top: 100px;
+}
+.services .content {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 50px;
+  width: 25%;
+  /* display: flex;
+  float: left; */
+}
+.content p {
+  /* border: 2px solid black; */
+  padding: 20px;
+}
+
+button {
+  padding: 8px;
+  border-radius: 5px;
+  background-color: rgb(66, 29, 153);
+  color: white;
+  /* justify-content: center; */
+
+  margin: 20px auto;
+}
+
+footer {
+  /* position: sticky; */
+  width: 100%;
+  height: 110px;
+  background-image: linear-gradient(#033747, #012733);
+  text-align: center;
+}
+
+footer p {
+  /* margin-top: 20px; */
+  color: white;
+}
+
+footer li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+footer li a {
+  padding: 0 30px;
+  text-decoration: none;
+}
+
+footer .links {
+  padding: 20px;
+}
+
+section .content {
+  width: 33%;
+  display: inline-block;
+}
+
+#about {
+  /* border: 1px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* background-color: #a5a5a5; */
+  margin: 20px auto;
+  padding: 50px;
+  display: flex;
+  float: left;
+  /* width: 50%; */
+  justify-content: center;
+  /* border-radius: 10px; */
+}
+
+#about1 {
+  float: left;
+  width: 50%;
+}
+#about2 {
+  width: 50%;
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+}
+
+#about1 img {
+  /* width: 50%; */
+  height: 300px;
+  padding: 20px;
+}
+
+.services div h2 {
+  margin: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container {
+  display: block;
+  justify-content: space-around;
+  width: 40%; /* Increased the width */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+  margin: auto;
+  padding: 30px;
+  font-size: 15px;
+  border-radius: 20px;
+}
+
+.heading {
+  justify-content: center;
+}
+
+.container-main {
+  display: flex;
+  float: left;
+}
+.container form {
+  text-align: center;
+  padding: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%; /* Make input boxes wider */
+  padding: 15px; /* Increase padding for larger input boxes */
+  font-size: 16px; /* Increase font size */
+}
+
+.container input[type="submit"] {
+  border-radius: 5px;
+  background-color: rgb(60, 156, 235);
+  color: white;
+  width: 100%;
+  padding: 15px; /* Increase padding for the submit button */
+  font-size: 16px; /* Increase font size */
+}
+
+/* #about2 {
+  width: 500px;
+} */
+
+/* .gallery img {
+  width: 500px;
+  height: 400px;
+  padding: 40px;
+  display: flex;
+  float: left;
+} */

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reeta Gainju</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <p>Reeta</p>
+      </div>
+
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Services</a></li>
+      </ul>
+    </nav>
+
+    <div class="content-items">
+      <img src="view1.jpg" alt="hero image" />
+    </div>
+
+    <div id="about">
+      <div id="about1">
+        <img src="panda.jfif" alt="" />
+      </div>
+
+      <div id="about2">
+        <h2 style="margin: 30px; text-align: center">About Us</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi ullam
+          fugit odit eaque, eius maiores officiis a eveniet quaerat earum
+          aliquid, adipisci tenetur provident ipsum ab? Commodi harum tenetur
+          necessitatibus doloremque, dolor deleniti fugit sapiente nesciunt
+          assumenda expedita pariatur odio magnam aliquam enim est quidem
+          numquam ut error, nulla delectus odit labore amet sed earum?
+          Laudantium commodi maxime expedita ea.
+        </p>
+
+        <button>See More</button>
+      </div>
+    </div>
+
+    <!-- <section class="gallery">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo ut autem
+        natus enim saepe labore ex atque dolorem iure est similique, hic magnam
+        laudantium alias cum nobis. Suscipit nemo consequuntur voluptatibus
+        tempora unde itaque nihil sapiente nulla deleniti. Non, eum.
+      </p>
+      <div class="frame">
+        <img src="bg.jpeg" alt="" />
+        <img src="bg.jpeg" alt="" />
+      </div>
+    </section>
+    <hr /> -->
+
+    <section class="services">
+      <h2>Services</h2>
+
+      <div class="content">
+        <p>
+          <!-- <h3>Web Development</h3> -->
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Exercitationem tempore provident alias natus? Pariatur sequi
+          repudiandae deleniti consequatur iusto quam adipisci voluptatem magnam
+          vitae totam, error nemo sapiente cupiditate? Incidunt eveniet
+          similique ullam r. Eligendi a adipisci aut nisi, consequuntur, hic
+          nihil quas maxime debitis iste. Aspernatur laboriosam voluptatem
+          dolore natus minima dolor, consequatur, laudantium fuga, dolorum
+          soluta aperiam deserunt vero consequuntur? Facilis quia ea praesentium
+          natus necessitatibus cum! Nisi modi nam atque natus at rerum! Officiis
+          eum recusandae libero quis earum!
+        </p>
+      </div>
+
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Exercitationem tempore provident alias natus? Pariatur sequi
+          repudiandae deleniti consequatur iusto quam adipisci voluptatem magnam
+          vitae totam, error nemo sapiente cupiditate? Incidunt eveniet
+          similique ullam r. Eligendi a adipisci aut nisi, consequuntur, hic
+          nihil quas maxime debitis iste. Aspernatur laboriosam voluptatem
+          dolore natus minima dolor, consequatur, laudantium fuga, dolorum
+          soluta aperiam deserunt vero consequuntur? Facilis quia ea praesentium
+          natus necessitatibus cum! Nisi modi nam atque natus at rerum! Officiis
+          eum recusandae libero quis earum!
+        </p>
+      </div>
+
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Exercitationem tempore provident alias natus? Pariatur sequi
+          repudiandae deleniti consequatur iusto quam adipisci voluptatem magnam
+          vitae totam, error nemo sapiente cupiditate? Incidunt eveniet
+          similique ullam r. Eligendi a adipisci aut nisi, consequuntur, hic
+          nihil quas maxime debitis iste. Aspernatur laboriosam voluptatem
+          dolore natus minima dolor, consequatur, laudantium fuga, dolorum
+          soluta aperiam deserunt vero consequuntur? Facilis quia ea praesentium
+          natus necessitatibus cum! Nisi modi nam atque natus at rerum! Officiis
+          eum recusandae libero quis earum!
+        </p>
+      </div>
+    </section>
+    <div class="container-main">
+      <div class="container">
+        <div class="heading">
+          <h2>Log In</h2>
+        </div>
+        <form class="form" id="form" action="" onsubmit="validateForm(event)">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" />
+            <span id="error_name" style="color: red"></span>
+          </div>
+          <br />
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" />
+            <div id="error_email" style="color: red"></div>
+          </div>
+          <br />
+
+          <!-- <div>
+          <label for="dob">Date of Birth</label>
+          <input type="date" name="dob" id="dob" />
+        </div>
+        <br /> -->
+
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" />
+            <div id="error_age" style="color: red"></div>
+          </div>
+
+          <br />
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+            <span id="error_password" style="color: red"></span>
+          </div>
+          <br />
+
+          <div class="form-group">
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" name="cpassword" id="cpassword" />
+            <span id="error_cpassword" style="color: red"></span>
+          </div>
+          <br />
+
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+
+      <div class="form-image">
+        <img src="form.png" alt="" />
+      </div>
+    </div>
+
+    <div class="last">
+      <div class="side1">
+        <h3>Platform</h3>
+        <ul>
+          <li>Dispatch</li>
+          <li>Dashboard</li>
+          <li>eporting & Analytics</li>
+          <li>Order Management</li>
+          <li>Fee Management</li>
+        </ul>
+      </div>
+
+      <div class="side1">
+        <h3>Business Line</h3>
+        <ul>
+          <li>On-site Fueling</li>
+          <li>Lubricants</li>
+          <li>Bulk Transport</li>
+          <li>Rental Asset Management</li>
+          <li>Propane/ Heating Oil</li>
+        </ul>
+      </div>
+      <div class="side1">
+        <h3>Platform</h3>
+        <ul>
+          <li>Dispatch</li>
+          <li>Dashboard</li>
+          <li>eporting & Analytics</li>
+          <li>Order Management</li>
+          <li>Fee Management</li>
+        </ul>
+      </div>
+    </div>
+    <!-- <div class="side2">
+        <h3>Contact</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+          veritatis ex temporibus voluptas nisi quidem eius expedita placeat
+          voluptatum debitis.
+        </p>
+      </div>
+    </div> -->
+    <footer>
+      <p>Copyright &copy; 2024 Fleetpanda</p>
+      <div class="links">
+        <li>
+          <a href="https://www.facebook.com/"
+            ><img src="fb.png" alt="" height="40px" width="40px"
+          /></a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com"
+            ><img src="li.png" alt="" height="40px" width="40px"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com"
+            ><img src="ig.png" alt="" height="40px" width="40px"
+          /></a>
+        </li>
+      </div>
+    </footer>
+  </body>
+</html>
