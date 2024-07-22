@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="../scripts/script.js"></script>
+  </head>
+  <body>
+    <div class="container-main">
+        <div class="container">
+          <div class="heading">
+            <h2>Sign Up</h2>
+          </div>
+          <form
+            class="form"
+            method=""
+            id="form"
+            action=""
+            onsubmit="validateForm(event)"
+          >
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" />
+              <span id="error_name" style="color: red"></span>
+            </div>
+            <br />
+  
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" name="email" id="email" />
+              <div id="error_email" style="color: red"></div>
+            </div>
+            <br />
+  
+            <!-- <div>
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" id="dob" />
+          </div>
+          <br /> -->
+  
+            <div class="form-group">
+              <label for="age">Age</label>
+              <input type="number" name="age" id="age" />
+              <div id="error_age" style="color: red"></div>
+            </div>
+  
+            <br />
+  
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" />
+              <span id="error_password" style="color: red"></span>
+            </div>
+            <br />
+  
+            <div class="form-group">
+              <label for="cpassword">Confirm Password</label>
+              <input type="password" name="cpassword" id="cpassword" />
+              <span id="error_cpassword" style="color: red"></span>
+            </div>
+            <br />
+  
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+  </body>
+</html>

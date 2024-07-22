@@ -58,39 +58,14 @@ function validateForm(event) {
   }
 
   if (isValid) {
-    // alert(`Name: ${name}\nEmail: ${email}\nAge: ${age}\n`);
     document.getElementById("form").submit();
   }
 
-  const formData = {
-    name: name,
-    email: email,
-    age: age,
-  };
-  alert(JSON.stringify(formData));
-  console.log(name, email, age);
+  //   const formData = {
+  //     name: name,
+  //     email: email,
+  //     age: age,
+  //   };
+  //   alert(JSON.stringify(formData));
+  //   console.log(name, email, age);
 }
-
-// class Todo {
-//   constructor(name, email, age, password) {
-//     (this.name = name),
-//       (this.email = email),
-//       (this.age = age),
-//       (this.password = password);
-//   }
-// }
-
-// list = [];
-
-// var form = document.querySelector("form");
-// form.onsubmit = function () {
-//   name1 = document.getElementById("name").value;
-//   email = document.getElementById("email").value;
-//   age = document.getElementById("age").value;
-//   password = document.getElementById("password").value;
-
-//   newTask = new Todo(name1, email, age, password);
-//   list.push(newTask);
-
-//   alert(list);
-// };
