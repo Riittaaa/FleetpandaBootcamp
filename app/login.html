@@ -4,47 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <script>
-      function validateForm(event) {
-        event.preventDefault();
-
-        let isValid = true;
-
-        const name = document.getElementById("name").value;
-        const errorName = document.getElementById("error_name");
-
-        const password = document.getElementById("password").value;
-        const errorPassword = document.getElementById("error_password");
-
-        if (name === "") {
-          errorName.textContent = "Username is required.";
-          isValid = false;
-        } else {
-          errorName.textContent = "";
-        }
-
-        if (password === "") {
-          errorPassword.textContent = "Password is required.";
-          isValid = false;
-        } else if (password.length < 6) {
-          errorPassword.textContent =
-            "Password must be at least 6 characters long.";
-          isValid = false;
-        } else {
-          errorPassword.textContent = "";
-        }
-
-        if (isValid) {
-          if (form.name.value == "admin" && form.password.value == "aaaaaa") {
-            window.location = "../index.html";
-          } else {
-            alert("Incorrect Password or Username");
-            return false;
-          }
-        }
-      }
-    </script>
-    <title>Document</title>
+    <title>Login</title>
   </head>
   <body>
     <div class="container" id="container">
@@ -65,14 +25,25 @@
         <br />
 
         <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+          <span id="error_email" style="color: red"></span>
+        </div>
+        <br />
+
+        <!-- <div class="form-group">
           <label for="password">Password</label>
           <input type="password" name="password" id="password" />
           <span id="error_password" style="color: red"></span>
         </div>
-        <br />
+        <br /> -->
 
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Log In" />
+        <br /><br />
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
       </form>
     </div>
+
+    <script src="../scripts/login.js"></script>
   </body>
 </html>
