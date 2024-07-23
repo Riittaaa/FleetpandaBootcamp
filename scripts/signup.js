@@ -80,7 +80,10 @@ function validateForm(event) {
       body: JSON.stringify(formData),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        localStorage.setItem("email", data.email);
+        window.location = "../app/posts.html";
+      })
       .then((error) => console.log(error));
     //const data = JSON.stringify(formData);
     //const data = Object.fromEntries(formData);

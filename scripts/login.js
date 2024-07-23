@@ -45,8 +45,9 @@ function validateForm(event) {
         );
 
         if (user) {
-          //   alert("Done");
-          window.location = "../index.html";
+          localStorage.setItem("email", user.email);
+          window.location = "../app/posts.html";
+          //window.location = "../index.html";
         } else {
           alert("Incorrect Username or Email");
         }
