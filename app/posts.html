@@ -4,21 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../css/posts.css" />
   </head>
   <body>
-    <h1>Posts</h1>
-    <div class="card"></div>
+    <nav>
+      <div class="logo">
+        <p>Fleetpanda</p>
+      </div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Title</th>
-          <th>Body</th>
-        </tr>
-      </thead>
-      <tbody id="posts"></tbody>
-    </table>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a onclick="logout()">Logout</a></li>
+        <!-- <li><a href="/app/signup.html">SignUp</a></li> -->
+      </ul>
+    </nav>
+
+    <h1>Posts</h1>
+    <div id="container"></div>
+
     <script src="../scripts/posts.js"></script>
   </body>
 </html>

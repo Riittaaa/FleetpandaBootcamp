@@ -1,7 +1,7 @@
 function validateForm(event) {
   event.preventDefault();
 
-  let isValid = true;
+  let isValid = false;
 
   const name = document.getElementById("name").value.trim();
   const errorName = document.getElementById("error_name");
@@ -10,6 +10,7 @@ function validateForm(event) {
     isValid = false;
   } else {
     errorName.textContent = "";
+    isValid = true;
   }
 
   const email = document.getElementById("email").value.trim();
@@ -23,18 +24,7 @@ function validateForm(event) {
     isValid = false;
   } else {
     errorEmail.textContent = "";
-  }
-
-  const age = document.getElementById("age").value.trim();
-  const errorAge = document.getElementById("error_age");
-  if (age === "") {
-    errorAge.textContent = "Age cannot be empty.";
-    // isValid = false;
-  } else if (age < 18) {
-    errorAge.textContent = "Age cannot be less than 18.";
-    isValid = false;
-  } else {
-    errorAge.textContent = "";
+    isValid = isValid && true;
   }
 
   const password = document.getElementById("password").value.trim();
@@ -47,6 +37,7 @@ function validateForm(event) {
     isValid = false;
   } else {
     errorPassword.textContent = "";
+    isValid = isValid && true;
   }
 
   const cpassword = document.getElementById("cpassword").value.trim();
@@ -56,21 +47,14 @@ function validateForm(event) {
     isValid = false;
   } else {
     errorCpassword.textContent = "";
+    isValid = isValid && true;
   }
 
   if (isValid) {
-    //const form = document.getElementById("form").submit();
-    // const data = document.querySelector(".form");
-    // data.addEventListener("submit", () => {
-    //   const formData = new formData(data);
-    //   console.log(formData.get("name"));
-    // });
-
     const formData = {
-      name: name,
-      email: email,
-      age: age,
-      password: password,
+      name,
+      email,
+      password,
     };
 
     fetch("https://jsonplaceholder.typicode.com/users", {
@@ -82,7 +66,8 @@ function validateForm(event) {
       .then((res) => res.json())
       .then((data) => {
         localStorage.setItem("email", data.email);
-        window.location = "../app/posts.html";
+        alert("New account created!!!");
+        window.location = "../app/login.html";
       })
       .then((error) => console.log(error));
     //const data = JSON.stringify(formData);

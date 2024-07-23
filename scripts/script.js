@@ -1,20 +1,32 @@
 function validateForm(event) {
   event.preventDefault();
 
-  let isValid = true;
+  let isValid = false;
 
   const name = document.getElementById("name").value;
   const errorName = document.getElementById("error_name");
+
+  const email = document.getElementById("email").value;
+  const errorEmail = document.getElementById("error_email");
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const age = document.getElementById("age").value;
+  const errorAge = document.getElementById("error_age");
+
+  const password = document.getElementById("password").value;
+  const errorPassword = document.getElementById("error_password");
+
+  const cpassword = document.getElementById("cpassword").value;
+  const errorCpassword = document.getElementById("error_cpassword");
+
   if (name === "") {
     errorName.textContent = "Name is required.";
     isValid = false;
   } else {
     errorName.textContent = "";
+    isValid = true;
   }
 
-  const email = document.getElementById("email").value;
-  const errorEmail = document.getElementById("error_email");
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (email === "") {
     errorEmail.textContent = "Email is required.";
     isValid = false;
@@ -23,21 +35,20 @@ function validateForm(event) {
     isValid = false;
   } else {
     errorEmail.textContent = "";
+    isValid = isValid && true; // Retain previous state if other validations passed
   }
 
-  const age = document.getElementById("age").value;
-  const errorAge = document.getElementById("error_age");
   if (age === "") {
     errorAge.textContent = "Age cannot be empty.";
+    isValid = false;
   } else if (age < 18) {
     errorAge.textContent = "Age cannot be less than 18.";
     isValid = false;
   } else {
     errorAge.textContent = "";
+    isValid = isValid && true;
   }
 
-  const password = document.getElementById("password").value;
-  const errorPassword = document.getElementById("error_password");
   if (password === "") {
     errorPassword.textContent = "Password is required.";
     isValid = false;
@@ -46,26 +57,18 @@ function validateForm(event) {
     isValid = false;
   } else {
     errorPassword.textContent = "";
+    isValid = isValid && true;
   }
 
-  const cpassword = document.getElementById("cpassword").value;
-  const errorCpassword = document.getElementById("error_cpassword");
   if (cpassword !== password) {
     errorCpassword.textContent = "Passwords do not match.";
     isValid = false;
   } else {
     errorCpassword.textContent = "";
+    isValid = isValid && true;
   }
 
   if (isValid) {
-    const form = document.getElementById("form").submit();
+    document.getElementById("form").submit();
   }
-
-  //   const formData = {
-  //     name: name,
-  //     email: email,
-  //     age: age,
-  //   };
-  //   alert(JSON.stringify(formData));
-  //   console.log(name, email, age);
 }

@@ -1,7 +1,7 @@
 function validateForm(event) {
   event.preventDefault();
 
-  let isValid = true;
+  let isValid = false;
 
   const name = document.getElementById("name").value;
   const errorName = document.getElementById("error_name");
@@ -17,6 +17,7 @@ function validateForm(event) {
     isValid = false;
   } else {
     errorName.textContent = "";
+    isValid = true;
   }
 
   if (email === "") {
@@ -24,6 +25,7 @@ function validateForm(event) {
     isValid = false;
   } else {
     errorEmail.textContent = "";
+    isValid = isValid && true;
   }
 
   //   if (password === "") {
@@ -47,7 +49,6 @@ function validateForm(event) {
         if (user) {
           localStorage.setItem("email", user.email);
           window.location = "../app/posts.html";
-          //window.location = "../index.html";
         } else {
           alert("Incorrect Username or Email");
         }

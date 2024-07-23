@@ -4,9 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/signup.css">
   </head>
   <body>
+    <nav>
+      <div class="logo">
+        <p>Fleetpanda</p>
+      </div>
+
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="/app/login.html" hidden>Login</a></li>
+        <!-- <li><a href="/app/signup.html">SignUp</a></li> -->
+      </ul>
+    </nav>
+
     <div class="container-main">
         <div class="container">
           <div class="heading">
@@ -20,7 +35,7 @@
             onsubmit="validateForm(event)"
           >
             <div class="form-group">
-              <label for="name">Name</label>
+              <label for="name">Username</label>
               <input type="text" name="name" id="name" />
               <span id="error_name" style="color: red"></span>
             </div>
@@ -39,13 +54,6 @@
           </div>
           <br /> -->
   
-            <div class="form-group">
-              <label for="age">Age</label>
-              <input type="number" name="age" id="age" />
-              <div id="error_age" style="color: red"></div>
-            </div>
-  
-            <br />
   
             <div class="form-group">
               <label for="password">Password</label>
