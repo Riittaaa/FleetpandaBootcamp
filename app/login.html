@@ -31,8 +31,8 @@
         class="form"
         id="form"
         action="/index/login.html"
-        onsubmit="validateForm(event)"
-      >
+        >
+        <!-- onsubmit="validateForm(event)" -->
         <div class="form-group">
           <label for="name">Username</label>
           <input type="text" name="name" id="name" />
@@ -53,6 +53,6 @@
       </form>
     </div>
 
-    <script src="../scripts/login.js"></script>
+    <script src="../scripts/login.js" type="module"></script>
   </body>
 </html>

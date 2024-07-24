@@ -23,7 +23,7 @@ fetch(apiUrl)
   });
 
 function logout() {
-  localStorage.removeItem("email");
+  localStorage.clear();
   alert("Loggedout");
   window.location = "../index.html";
 }
