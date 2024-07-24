@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 * {
@@ -80,12 +82,16 @@ p {
   font-family: sans-serif;
 }
 
+button {
+  padding: 10px 6px;
+  border-radius: 12px;
+}
 #read {
   margin: 30px;
   text-align: center;
   background-color: #012733;
   color: white;
-  padding-left: 40px 0;
+  font-size: 15px;
 }
 
 h1 {
