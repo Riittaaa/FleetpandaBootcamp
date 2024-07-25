@@ -58,25 +58,15 @@ function validateForm(event) {
       email,
       password,
     };
-
-    request("https://jsonplaceholder.typicode.com/users", "POST", formData);
+    console.log(formData);
+    request("https://jsonplaceholder.typicode.com/users", "POST", formData)
+      .then((data) => {
+        localStorage.setItem("email", data.email);
+        alert("New account created!!!");
+        window.location = "../app/login.html";
+      })
+      .then((error) => console.log(error));
   }
 }
 
 document.getElementById("form").addEventListener("submit", validateForm);
-// fetch("https://jsonplaceholder.typicode.com/users", {
-//   method: "POST",
-//   headers: { "Content-Type": "application/json" },
-
-//   body: JSON.stringify(formData),
-// })
-//   .then((res) => res.json())
-//   .then((data) => {
-//     localStorage.setItem("email", data.email);
-//     alert("New account created!!!");
-//     window.location = "../app/login.html";
-//   })
-//   .then((error) => console.log(error));
-//const data = JSON.stringify(formData);
-//const data = Object.fromEntries(formData);
-//console.log(formData);

@@ -28,22 +28,14 @@ nav {
   /* background-image: linear-gradient(#033747, #012733); */
 }
 
-nav .logo p {
-  font-size: 30px;
-  /* font-weight: bold; */
-  font-style: italic;
-  float: left;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  cursor: pointer;
-}
-
 nav {
-  flex: 1;
-  text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
+.logo {
+  margin-top: 20px;
+}
 nav ul li {
   list-style: none;
   display: inline-block;
@@ -286,9 +278,14 @@ section .content {
   font-size: 16px;
 }
 
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+}
+
 .container input[type="submit"] {
   border-radius: 5px;
-  background-color: rgb(60, 156, 235);
+  background-color: #012733;
   color: white;
   width: 100%;
   padding: 15px;

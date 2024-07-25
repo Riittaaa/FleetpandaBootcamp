@@ -27,11 +27,7 @@
       <div class="heading">
         <h2>Log In</h2>
       </div>
-      <form
-        class="form"
-        id="form"
-        action="/index/login.html"
-        >
+      <form class="form" id="form" action="/index/login.html">
         <!-- onsubmit="validateForm(event)" -->
         <div class="form-group">
           <label for="name">Username</label>
@@ -44,6 +40,13 @@
           <label for="email">Email</label>
           <input type="email" name="email" id="email" />
           <span id="error_email" style="color: red"></span>
+        </div>
+        <br />
+
+        <div class="form-group">
+          <label for="password">password</label>
+          <input type="password" name="password" id="password" />
+          <!-- <span id="error_email" style="color: red"></span> -->
         </div>
         <br />
 

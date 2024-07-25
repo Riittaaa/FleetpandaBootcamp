@@ -1,17 +1,12 @@
-const apiUrl = "https://jsonplaceholder.typicode.com/posts";
+import { request } from "./apiRequest.js";
+// const apiUrl = "https://jsonplaceholder.typicode.com/posts";
 
-fetch(apiUrl)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-    return response.json();
-  })
+request("https://jsonplaceholder.typicode.com/posts", "GET")
   .then((data) => {
     let rows = "";
 
     data.forEach((post) => {
-      rows += `<div class="card"><h2 class="title">${post.title}</h2><p>${post.body}</p><button id="read" onclick="read(${post.id})">Read</button></div>`;
+      rows += `<div class="card"><h2 class="title">${post.blogTitle}</h2><p>${post.blogDescription}</p><button id="read" onclick="read(${post.postId})">Read</button></div>`;
     });
     // data.forEach((post) => {
     //   rows += `<tr><td>${post.id}</td><td>${post.title}</td><td>${post.body}</td></tr>`;
@@ -22,12 +17,18 @@ fetch(apiUrl)
     console.error("Error:", error);
   });
 
+document.getElementById("logout").onclick = function () {
+  logout();
+};
+
 function logout() {
+  // console.log("Logout function called");
   localStorage.clear();
-  alert("Loggedout");
+  alert("Logged out");
   window.location = "../index.html";
 }
 
 function read(id) {
   window.location = `post.html?id=${id}`;
 }
+window.read = read;

@@ -11,6 +11,8 @@ function validateForm(event) {
   const email = document.getElementById("email").value.trim();
   const errorEmail = document.getElementById("error_email");
 
+  const password = document.getElementById("password").value.trim();
+
   if (name === "") {
     errorName.textContent = "Username is required.";
     isValid = false;
@@ -28,10 +30,23 @@ function validateForm(event) {
   }
 
   if (isValid) {
-    request("https://jsonplaceholder.typicode.com/users", "GET", {
-      name,
+    const formData = {
+      // name,
       email,
-    });
+      password,
+    };
+
+    request("https://reqres.in/api/login", "POST", formData)
+      // .then((response) => response.json())
+      .then((data) => {
+        if (data && data.token) {
+          localStorage.setItem("token", data.token);
+          window.location = "../app/posts.html";
+        } else {
+          alert("Incorrect Username or Email");
+        }
+      })
+      .catch((error) => console.log(error));
   }
 }
 
