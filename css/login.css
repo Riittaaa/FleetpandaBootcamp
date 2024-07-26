@@ -11,7 +11,49 @@ body {
   min-height: 100vh;
 }
 
-.container {
+.nav {
+  width: 100%;
+  height: 75px;
+  line-height: 75px;
+  padding: 0 100px;
+  background-image: linear-gradient(#033747, #012733);
+}
+
+.nav__logo {
+  float: left;
+}
+
+.nav__logo-text {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.nav__list {
+  float: right;
+}
+
+.nav__item {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.nav__link {
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 0 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: #ff8c69;
+}
+
+.card {
   display: block;
   width: 30%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -19,43 +61,35 @@ body {
   margin: auto;
   padding: 20px;
   font-size: 15px;
-  /* border-radius: 20px; */
 }
 
-.heading {
+.card__heading {
   justify-content: center;
 }
 
-.container-main {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin: 50px auto;
-}
-
-.container form {
+.card__form {
   text-align: center;
   padding: 30px;
 }
 
-.form-group {
+.form__group {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 15px;
 }
 
-.form-group label {
+.form__label {
   margin-bottom: 5px;
 }
 
-.form-group input {
+.form__input {
   width: 100%;
   padding: 15px;
   font-size: 16px;
 }
 
-.container input[type="submit"] {
+.form__submit {
   border-radius: 5px;
   background-color: #012733;
   color: white;
@@ -64,41 +98,15 @@ body {
   font-size: 16px;
 }
 
-nav {
-  width: 100%;
-  height: 75px;
-  line-height: 75px;
-  padding: 0 100px;
-  background-image: linear-gradient(#033747, #012733);
+.form__text {
+  margin-top: 15px;
 }
 
-nav .logo p {
-  font-size: 30px;
-  font-weight: bold;
-  float: left;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  cursor: pointer;
-}
-
-nav ul {
-  float: right;
-}
-
-nav li {
-  display: inline-block;
-  list-style-type: none;
-}
-
-nav li a {
-  font-size: 18px;
-  text-transform: uppercase;
-  padding: 0 30px;
-  color: white;
+.form__link {
+  color: #012733;
   text-decoration: none;
 }
 
-nav li a:hover {
-  color: #ff8c69;
+.form__link:hover {
+  text-decoration: underline;
 }

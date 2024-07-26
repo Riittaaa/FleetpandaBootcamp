@@ -4,76 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
-    <link rel="stylesheet" href="/css/signup.css">
+    <link rel="stylesheet" href="/css/signup.css" />
   </head>
   <body>
-    <nav>
-      <div class="logo">
-        <p>R</p>
+    <nav class="nav">
+      <div class="nav__logo">
+        <p class="nav__logo-text">R</p>
       </div>
 
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">About Us</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">Services</a></li>
-        <li><a href="/app/login.html" hidden>Login</a></li>
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="">Home</a></li>
+        <li class="nav__item"><a class="nav__link" href="">About Us</a></li>
+        <li class="nav__item"><a class="nav__link" href="">Contact</a></li>
+        <li class="nav__item"><a class="nav__link" href="">Services</a></li>
+        <li class="nav__item">
+          <a class="nav__link" href="/app/login.html" hidden>Login</a>
+        </li>
         <!-- <li><a href="/app/signup.html">SignUp</a></li> -->
       </ul>
     </nav>
 
-    <div class="container-main">
-        <div class="container">
-          <div class="heading">
-            <h2>Sign Up</h2>
-          </div>
-          <form
-            class="form"
-            method="post"
-            id="form"
-            action=""
-            >
-            <!-- onsubmit="validateForm(event)" -->
-            <div class="form-group">
-              <label for="name">Username</label>
-              <input type="text" name="name" id="name" />
-              <span id="error_name" style="color: red"></span>
-            </div>
-            <br />
-  
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="text" name="email" id="email" />
-              <div id="error_email" style="color: red"></div>
-            </div>
-            <br />
-  
-            <!-- <div>
+    <div class="card">
+      <!-- <div class="container"> -->
+      <div class="card__heading">
+        <h2>Sign Up</h2>
+      </div>
+      <form class="card__form form" method="post" id="form" action="">
+        <!-- onsubmit="validateForm(event)" -->
+        <div class="form__group">
+          <label class="form__label" for="name">Username</label>
+          <input class="form__input" type="text" name="name" id="name" />
+          <span class="form__error" id="error_name" style="color: red"></span>
+        </div>
+        <br />
+
+        <div class="form__group">
+          <label class="form__label" for="email">Email</label>
+          <input class="form__input" type="text" name="email" id="email" />
+          <span class="form__error" id="error_email" style="color: red"></span>
+        </div>
+        <br />
+
+        <!-- <div>
             <label for="dob">Date of Birth</label>
             <input type="date" name="dob" id="dob" />
           </div>
           <br /> -->
-  
-  
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" name="password" id="password" />
-              <span id="error_password" style="color: red"></span>
-            </div>
-            <br />
-  
-            <div class="form-group">
-              <label for="cpassword">Confirm Password</label>
-              <input type="password" name="cpassword" id="cpassword" />
-              <span id="error_cpassword" style="color: red"></span>
-            </div>
-            <br />
-  
-            <input type="submit" value="Sign Up" />
-          </form>
+
+        <div class="form__group">
+          <label class="form__label" for="password">Password</label>
+          <input
+            class="form__input"
+            type="password"
+            name="password"
+            id="password"
+          />
+          <span
+            class="form__error"
+            id="error_password"
+            style="color: red"
+          ></span>
         </div>
+        <br />
 
+        <div class="form__group">
+          <label class="form__label" for="cpassword">Confirm Password</label>
+          <input
+            class="form__input"
+            type="password"
+            name="cpassword"
+            id="cpassword"
+          />
+          <span
+            class="form__error"
+            id="error_cpassword"
+            style="color: red"
+          ></span>
+        </div>
+        <br />
+
+        <input class="form__submit" type="submit" value="Sign Up" />
+      </form>
+      <!-- </div> -->
+    </div>
     <script src="../scripts/signup.js" type="module"></script>
-
   </body>
 </html>
