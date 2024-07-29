@@ -1,5 +1,11 @@
+import { auth } from "./auth.js";
+
 import { request } from "./apiRequest.js";
 // const apiUrl = "https://jsonplaceholder.typicode.com/posts";
+
+if (!auth()) {
+  window.location.href = "login.html";
+}
 
 request("https://jsonplaceholder.typicode.com/posts", "GET")
   .then((data) => {
@@ -11,6 +17,7 @@ request("https://jsonplaceholder.typicode.com/posts", "GET")
     // data.forEach((post) => {
     //   rows += `<tr><td>${post.id}</td><td>${post.title}</td><td>${post.body}</td></tr>`;
     // });
+
     document.getElementById("container").innerHTML = rows;
   })
   .catch((error) => {

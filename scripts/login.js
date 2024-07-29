@@ -12,6 +12,7 @@ function validateForm(event) {
   const errorEmail = document.getElementById("error_email");
 
   const password = document.getElementById("password").value.trim();
+  const errorPassword = document.getElementById("error_password");
 
   if (name === "") {
     errorName.textContent = "Username is required.";
@@ -26,6 +27,14 @@ function validateForm(event) {
     isValid = false;
   } else {
     errorEmail.textContent = "";
+    isValid = isValid && true;
+  }
+
+  if (password === "") {
+    errorPassword.textContent = "Password is required.";
+    isValid = false;
+  } else {
+    errorPassword.textContent = "";
     isValid = isValid && true;
   }
 

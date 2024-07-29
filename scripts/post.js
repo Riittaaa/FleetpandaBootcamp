@@ -1,4 +1,9 @@
+import { auth } from "./auth.js";
 import { request } from "./apiRequest.js";
+
+if (!auth()) {
+  window.location.href = "login.html";
+}
 
 function getPostIdFromUrl() {
   const urlParams = new URLSearchParams(window.location.search);
